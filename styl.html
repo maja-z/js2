@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .niebieski {
+            background: blue;
+            font-size: xx-large;
+            color: white;
+        }
+    </style>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $('button:contains("Niebieski")').click(function () {
+                $('#first').addClass('niebieski');
+            });
+
+            $('button:contains("Czarny")').click(function () {
+                $('#first').removeClass('niebieski');
+            });
+
+            $('button:contains("nadany")').click(function () {
+                $('#toggle').toggleClass('niebieski');
+            });
+            $('table tr:even').css('background-color', 'powderblue');
+
+        });
+
+        $('ol li.koloruj').css('color', 'green'); // elementy z klasą "koloruj"
+        $('ol li:has(a)').css('color', 'green');  // elementy zawierające linki
+
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr><td>Poniedziałek</td></tr>
+        <tr><td>Wtorek</td></tr>
+        <tr><td>Środa</td></tr>
+        <tr><td>Czwartek</td></tr>
+        <tr><td>Piątek</td></tr>
+        <tr><td>Sobota</td></tr>
+        <tr><td>Niedziela</td></tr>
+    </table>
+
+    <ol>
+        <li class="koloruj">Element z klasą "koloruj"</li>
+        <li><a href="https://example.com">Element z linkiem</a></li>
+        <li class="koloruj"><a href="#">Element z klasą i linkiem</a></li>
+        <li>Zwykły element</li>
+    </ol>
+    
+
+    <div>
+        <button>Niebieski</button>
+        <button>Czarny</button>
+        <span id="first">Tekst testowy do zmiany koloru</span>
+    </div>
+
+    <div>
+        <button>który zostanie nadany przez funkcję.</button>
+        <span id="toggle">Zmiana przez przełączanie klas.</span>
+    </div>
+</body>
+</html>
 
